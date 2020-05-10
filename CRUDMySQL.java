@@ -1,7 +1,7 @@
 import java.util.*;
 import java.sql.*;
 
-class CRUDMySQL implements CRUD
+class CRUDMySQL implements iCRUD
 {
 	Connection connection;
 	String tableName = "Bank";

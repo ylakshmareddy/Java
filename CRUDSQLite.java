@@ -1,7 +1,7 @@
 import java.sql.*;
 import java.util.*;
 
-class CRUDSQLite implements CRUD 
+class CRUDSQLite implements iCRUD 
 {
 	Connection connection;
 	String tableName = "PassenegerDetails";

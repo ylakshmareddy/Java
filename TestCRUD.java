@@ -17,7 +17,7 @@ class TestCRUD
 		}
 		try
 		{
-			CRUD crud = (CRUD)Class.forName(className).newInstance();
+			iCRUD crud = (iCRUD)Class.forName(className).newInstance();
 			System.out.println("Welcome\n1. create.\n2. read.");
 			System.out.print("Enter your choice: ");
 			int userChoice = scanner.nextInt();
@@ -25,15 +25,24 @@ class TestCRUD
 			{
 				crud.create();
 			}
-			else
+			else if(userChoice == 2)
 			{
 				crud.read();
+			}
+			else
+			{
+				printInvalidChoiceMessage();
 			}
 			
 		}
 		catch(Exception e)
 		{
-			System.out.println(e);
+			scanner.next();
+			printInvalidChoiceMessage();
 		}
+	}
+	public static void printInvalidChoiceMessage()
+	{
+		System.out.println("Invalid choice.");
 	}
 }
