@@ -17,23 +17,22 @@ class TestCRUD
 		}
 		try
 		{
-			iCRUD crud = (iCRUD)Class.forName(className).newInstance();
+			iCRUD oCRUD = (iCRUD)Class.forName(className).newInstance();
 			System.out.println("Welcome\n1. create.\n2. read.");
 			System.out.print("Enter your choice: ");
 			int userChoice = scanner.nextInt();
 			if(userChoice == 1)
 			{
-				crud.create();
+				oCRUD.create();
 			}
 			else if(userChoice == 2)
 			{
-				crud.read();
+				oCRUD.read();
 			}
 			else
 			{
 				printInvalidChoiceMessage();
 			}
-			
 		}
 		catch(Exception e)
 		{
