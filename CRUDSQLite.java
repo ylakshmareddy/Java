@@ -55,7 +55,8 @@ class CRUDSQLite implements CRUD
 			{
 				for( ; columnCounter < countOfColumns; columnCounter++)
 				{
-					System.out.println(columnNames[columnCounter] + ": " + resultSet.getString(columnCounter + 1));
+					System.out.format("%-15s%s%s",columnNames[columnCounter], ": ", resultSet.getString(columnCounter + 1));
+					System.out.println();
 				}
 			}
 			if(columnCounter == 0)
